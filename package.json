@@ -46,6 +46,8 @@
     "webpack-notifier": "^1.5.0"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "normalize.css": "^7.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-material-select": "^1.1.0",

@@ -1,0 +1,42 @@
+{
+  "titles": ["<h3>Experience</h3>", "<h3>Skills</h3>", "<h3>Projects</h3>"],
+  "me": ["<h1>Leszek Pawlak</h1>", "<h2>Frontend Web Developer</h2>", "<p>worked in Uptowork from 1.07.2017</p>"],
+  "experiences": [
+    ["<h4>IT Kontrakt (02 - 06 2017)</h4>", "<p>Acting as Frontend Web Developer in the development of a website visualize graphs based on open source project WebVOWL.</p>"],
+    ["<h4>Bitnoise (03 2014 - 01 2017)</h4>", "<p>Creating RWD, hybrid applications based on the newest fronted technologies.</p>"],
+    ["<h4>Hive Sports & Media (04 2013 - 02 2014)</h4>", "<p>Developing PHP applications.</p>"]
+  ],
+  "skills": {
+    "React": 5.5,
+    "JavaScript": 5,
+    "AngularJS": 4.5,
+    "CSS3": 5,
+    "HTML5": 5
+  },
+  "projects": [{
+      "name": "<h4>Roche (WebVOWL)</h4>",
+      "period": "<p>2017/02 - 2017/06</p>",
+      "technologies": "<strong>JavaScript, AngularJS, D3.js, CSS, PostCSS, Webpack, Grunt</strong>"
+    },
+    {
+      "name": "<h4>Bitnoise (American Red Cross)</h4>",
+      "period": "<p>2015/08 - 2017/01</p>",
+      "technologies": "<strong>JavaScript, AngularJS, Ionic, Cordova, PhoneGap, PostCSS, RESTful API, Grunt, Gulp.js</strong>"
+    },
+    {
+      "name": "<h4>Bitnoise (ICS Forms)</h4>",
+      "period": "<p>2015/12 - 2016/11</p>",
+      "technologies": "<strong>JavaScript, React, Redux, PostCSS, RESTful API, PhantomJS, Node.js, Grunt, Gulp.js</strong>"
+    },
+    {
+      "name": "<h4>Bitnoise (World Fixer)</h4>",
+      "period": "<p>2015/07 - 2016/10</p>",
+      "technologies": "<strong>PHP, Symfony 2, DDD architecture, RESTful API, JavaScript, AngularJS, Elasticsearch, MongoDB, Grunt, Gulp.js</strong>"
+    },
+    {
+      "name": "<h4>Bitnoise (Shuttout)</h4>",
+      "period": "<p>2015/06 - 2016/08</p>",
+      "technologies": "<strong>PHP, Symfony 2, DDD architecture, RESTful API, JavaScript, AngularJS, PostCSS, Elasticsearch, MongoDB, Scrum, Grunt, Gulp.js, Node.js</strong>"
+    }
+  ]
+}

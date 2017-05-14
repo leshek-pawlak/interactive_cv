@@ -1,0 +1,109 @@
+@import "normalize.css";
+@import 'react-material-select/lib/css/reactMaterialSelect.css';
+@import 'variables.css';
+
+body {
+  font-family: "Roboto";
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+  height: $imageSize;
+  width: $imageSize;
+}
+
+.rms-wrapper {
+  width: 100%;
+}
+
+.container {
+  @media (--tablet) {
+    padding: 20px 15%;
+  }
+
+  @media (--desktop) {
+    padding: 20px 30%;
+  }
+  background-color: $backgroundColor;
+  padding: 20px 5%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  flex-direction: row;
+  transition: backgroundColor 0.5s ease-in-out;
+
+  &.edit-mode {
+    background-color: $editModeColor;
+  }
+}
+
+.card {
+  flex: 1 1 100%;
+  background: $cardColor;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+  &.half {
+    flex: 1 2 0;
+    min-width: 200px;
+  }
+}
+
+.float-wrapper {
+  display: inline-block;
+  width: 70%;
+}
+
+.pull {
+  &-left {
+    float: left;
+  }
+
+  &-right {
+    float: right;
+  }
+}
+
+.projects {
+  text-align: left;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed $borderColor;
+  display: flex;
+  justify-content: space-between;
+
+  &:nth-last-child(1) {
+    border-bottom: none;
+  }
+
+  :nth-child(3n - 1) {
+    text-align: center;
+  }
+
+  :nth-child(3n) {
+    text-align: right;
+  }
+
+  > div {
+    flex: 1;
+  }
+
+  h4 {
+    color: $projectNameColor;
+  }
+
+  p {
+    color: $projectPeriodColor;
+  }
+
+  strong {
+    color: $projectTechnologiesColor;
+  }
+}
