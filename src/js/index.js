@@ -7,9 +7,9 @@ import React from 'react'
 import thunk from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 // reducers
-import reducer from '../reducers/index'
+import reducer from './reducers/index'
 // containers
-import Home from '../containers/Home'
+import Home from './containers/Home'
 // pages
 import 'babel-polyfill'
 

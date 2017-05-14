@@ -1,13 +1,13 @@
-import React, {Component, PropTypes} from 'react'
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux'
+import React, { Component, PropTypes } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import ReactMaterialSelect from 'react-material-select'
-import {setEditMode} from '../actions/index'
+import { setEditMode } from '../actions/index'
 import TextChanger from './TextChanger'
 import classNames from 'classnames'
 import initialContent from '../initialData'
 
-import '../css/main.css'
+import '../../css/main.css'
 
 class Home extends Component {
     static propTypes = {
