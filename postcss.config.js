@@ -5,7 +5,6 @@ module.exports = {
         }),
         require('postcss-import')({async: true}),
         require('postcss-nested')(),
-        require('postcss-extend')(),
         require('postcss-simple-vars')(),
         require('postcss-quantity-queries')(),
         require('postcss-custom-media')({
