@@ -4,6 +4,6 @@
         "number-leading-zero": null,
         "comment-empty-line-before": null,
         "declaration-empty-line-before": "never",
-        "indentation": 4
+        "indentation": 2
     }
 }
