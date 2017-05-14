@@ -23,42 +23,44 @@ var config = {
         libraryTarget: 'assign',
         library: '[name]',
     },
-    devtool: isProduction ? 'source-map' : 'eval',
+    devtool: isProduction
+    ? 'source-map'
+    : 'eval',
     module: {
-        rules: [{
-            test: /\.js$/, // include .js files
-            enforce: 'pre', // preload the eslint loader
-            exclude: [
-                /node_modules/,
-                /build/,
-            ], // exclude all files in the node_modules and build folder
-            use: [{
-                loader: 'eslint-loader',
-            }],
-        },
-        {
-            test: /\.js?$/,
-            loader: 'babel-loader',
-            exclude: /node_modules/,
-        },
-        {
-            test: /\.html$/,
-            loader: 'html-loader',
-        },
-        {
-            test: /\.css$/,
-            use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: [{
-                    loader: 'css-loader',
-                    options: {
-                        minimize: isProduction,
+        rules: [
+            {
+                test: /\.js$/, // include .js files
+                enforce: 'pre', // preload the eslint loader
+                exclude: [
+                    /node_modules/, /build/,
+                ], // exclude all files in the node_modules and build folder
+                use: [
+                    {
+                        loader: 'eslint-loader',
                     },
-                },
-                    'postcss-loader',
                 ],
-            }),
-        },
+            }, {
+                test: /\.js?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+            }, {
+                test: /\.html$/,
+                loader: 'html-loader',
+            }, {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                minimize: isProduction,
+                            },
+                        },
+                        'postcss-loader',
+                    ],
+                }),
+            },
         ],
     },
     plugins: [
@@ -70,9 +72,7 @@ var config = {
             allChunks: true,
         }),
         new webpack.optimize.UglifyJsPlugin(),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-        }),
+        new HtmlWebpackPlugin({template: './src/index.html'}),
         new WebpackNotifierPlugin({title: 'Leszek właśnie zbudował CV'}),
     ],
     devServer: {
@@ -87,23 +87,16 @@ var config = {
 }
 
 if (isProduction) {
-    config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
+    config.plugins.push(new webpack.optimize.UglifyJsPlugin({
         sourcemap: true,
         minimize: true,
-        compress: {
-            warnings: true,
+    }), new CopyWebpackPlugin([
+        {
+            from: 'src/favicon.ico',
         },
-    }),
-    new CopyWebpackPlugin([{
-        from: 'src/favicon.ico',
-    }])
-  )
+    ]))
 } else {
-    config.plugins.push(
-    new DashboardPlugin(),
-    new webpack.HotModuleReplacementPlugin()
-  )
+    config.plugins.push(new DashboardPlugin(), new webpack.HotModuleReplacementPlugin())
 }
 
 module.exports = config
