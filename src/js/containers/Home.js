@@ -20,15 +20,17 @@ class Home extends Component {
         this.state = {
             content: initialContent,
         }
+        // to have "this" in the functions we need to bind them.
         this.callbackFunction = this.callbackFunction.bind(this)
     }
 
     callbackFunction(selected) {
-    // change edit mode
+        // change edit mode
         this.props.actions.setEditMode(selected.value)
     }
 
     render() {
+        // Get skills from content, sort them by number attribute and save as array.
         let skillsToSort = []
         for (let key in this.state.content.skills) {
             skillsToSort.push([
@@ -38,6 +40,7 @@ class Home extends Component {
         skillsToSort.sort(function(a, b) {
             return b[1] - a[1]
         })
+        // remove number value we used to sort elements
         let skills = skillsToSort.map(skillArray => {
             return skillArray[0]
         })
@@ -50,22 +53,26 @@ class Home extends Component {
           {this.props.editMode && <TextChanger value="<p>Double click on text to change it, and double click again to stop changing.</p>"/>}
           <div className="card">
             <img src="https://avatars3.githubusercontent.com/u/4362802?v=3&s=460"/>
+            {/* Best way to display many elements is map the array */}
             {this.state.content.me.map((content, i) => {
                 return <TextChanger key={i} value={content}/>
             })}
           </div>
           <div className="card">
             <TextChanger value={this.state.content.titles[2]}/>
+            {/* When the array have objects we can display them that way ... */}
             {this.state.content.projects.map((project, i) => {
                 return <div className="projects" key={i}><TextChanger style={{ flexWrap: 'nowrap' }} value={project.name}/><TextChanger value={project.technologies}/><TextChanger style={{ flexWrap: 'nowrap' }} value={project.period}/></div>
             })}
           </div>
           <div className="card half">
             <TextChanger value={this.state.content.titles[1]}/>
+            {/* ... or prepare earlier array to display */}
             {skills}
           </div>
           <div className="card half">
             <TextChanger value={this.state.content.titles[0]}/>
+            {/* We can make map functions nested in the react template files */}
             {this.state.content.experiences.map((experience, i) => {
                 return experience.map((description, k) => {
                     return <TextChanger key={`${i}_${k}`} value={description}/>
@@ -78,7 +85,9 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
-    return {editMode: state.editMode}
+    return {
+        editMode: state.editMode,
+    }
 }
 
 function mapDispatchToProps(dispatch) {

@@ -9,6 +9,7 @@ const initialState = {
 export default function pages(state = initialState, action = {}) {
     switch (action.type) {
         case SET_EDIT_MODE:
+            // reducer needs to return a new object of state
             return {
                 ...state,
                 editMode: action.editMode,

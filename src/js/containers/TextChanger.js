@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
 class TextChanger extends Component {
+    // Here we defined propeties which components or containers can get from parent
     static propTypes = {
         value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
         className: PropTypes.string,
@@ -29,6 +30,7 @@ class TextChanger extends Component {
     }
 
     doubleClickHandle() {
+        // make double click works only in edit mode
         if (!this.props.editMode) {return}
         this.setState({
             doubleClicked: !this.state.doubleClicked,
@@ -36,6 +38,7 @@ class TextChanger extends Component {
     }
 
     textareaChangeHandler(event) {
+        // save changes from textarea to state
         this.setState({
             textValue: event.target.value,
         })
