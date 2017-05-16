@@ -7,11 +7,13 @@
     ["<h4>Hive Sports & Media (04 2013 - 02 2014)</h4>", "<p>Developing PHP applications.</p>"]
   ],
   "skills": {
-    "React": 5.5,
-    "JavaScript": 5,
-    "AngularJS": 4.5,
-    "CSS3": 5,
-    "HTML5": 5
+    "React": 10,
+    "JavaScript": 9,
+    "AngularJS": 8,
+    "CSS3": 9,
+    "HTML5": 9,
+    "NodeJS": 2,
+    "PHP": 5
   },
   "projects": [{
       "name": "<h4>Roche (WebVOWL)</h4>",

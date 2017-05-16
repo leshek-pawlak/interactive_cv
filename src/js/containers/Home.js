@@ -34,7 +34,7 @@ class Home extends Component {
         let skillsToSort = []
         for (let key in this.state.content.skills) {
             skillsToSort.push([
-                <div className="float-wrapper" key={key}><TextChanger className="pull-left" value={key}/><TextChanger className="pull-right" value={this.state.content.skills[key]}/></div>, this.state.content.skills[key],
+                <div className="float-wrapper" key={key}><TextChanger className="pull-left" value={key}/><div className="pull-right"><div className={`rate-${this.state.content.skills[key]}`}></div></div></div>, this.state.content.skills[key],
             ])
         }
         skillsToSort.sort(function(a, b) {
@@ -65,12 +65,12 @@ class Home extends Component {
                 return <div className="projects" key={i}><TextChanger style={{ flexWrap: 'nowrap' }} value={project.name}/><TextChanger value={project.technologies}/><TextChanger style={{ flexWrap: 'nowrap' }} value={project.period}/></div>
             })}
           </div>
-          <div className="card half">
+          <div className="card half skills">
             <TextChanger value={this.state.content.titles[1]}/>
             {/* ... or prepare earlier array to display */}
             {skills}
           </div>
-          <div className="card half">
+          <div className="card half experiences">
             <TextChanger value={this.state.content.titles[0]}/>
             {/* We can make map functions nested in the react template files */}
             {this.state.content.experiences.map((experience, i) => {

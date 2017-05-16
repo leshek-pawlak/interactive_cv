@@ -4,6 +4,7 @@ module.exports = {
             browsers: ['> 5%', 'last 2 versions'],
         }),
         require('postcss-import')({async: true}),
+        require('postcss-for')(),
         require('postcss-nested')(),
         require('postcss-simple-vars')(),
         require('postcss-quantity-queries')(),

@@ -30,6 +30,7 @@
     "html-webpack-plugin": "^2.28.0",
     "postcss-custom-media": "^6.0.0",
     "postcss-font-magician": "^1.6.1",
+    "postcss-for": "^2.1.1",
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.5",
     "postcss-nested": "^2.0.2",

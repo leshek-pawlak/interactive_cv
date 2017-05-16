@@ -1,0 +1,45 @@
+.skills {
+  .pull-left {
+    line-height: 1.6em;
+  }
+
+  .pull-right {
+    width: 50%;
+    padding: 4px;
+
+    > div {
+      height: 16px;
+      border-radius: 4px;
+      background-image: linear-gradient(to left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    }
+  }
+
+  @for $i from 1 to 10 {
+    .rate-$i { width: $(i)0%; }
+  }
+
+  .rate-9,
+  .rate-10 {
+    background-color: $rateBarBackground9;
+  }
+
+  .rate-7,
+  .rate-8 {
+    background-color: $rateBarBackground7;
+  }
+
+  .rate-5,
+  .rate-6 {
+    background-color: $rateBarBackground5;
+  }
+
+  .rate-3,
+  .rate-4 {
+    background-color: $rateBarBackground3;
+  }
+
+  .rate-1,
+  .rate-2 {
+    background-color: $rateBarBackground1;
+  }
+}
