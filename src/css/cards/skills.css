@@ -1,4 +1,13 @@
 .skills {
+  .float-wrapper {
+    @media (--tablet) {
+      width: 70%;
+    }
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
   .pull-left {
     line-height: 1.6em;
   }
@@ -12,10 +21,6 @@
       border-radius: 4px;
       background-image: linear-gradient(to left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
     }
-  }
-
-  @for $i from 1 to 10 {
-    .rate-$i { width: $(i)0%; }
   }
 
   .rate-9,
@@ -41,5 +46,9 @@
   .rate-1,
   .rate-2 {
     background-color: $rateBarBackground1;
+  }
+
+  @for $i from 1 to 10 {
+    .rate-$i { width: $(i)0%; }
   }
 }

@@ -58,11 +58,11 @@ class Home extends Component {
                 return <TextChanger key={i} value={content}/>
             })}
           </div>
-          <div className="card">
+          <div className="card projects">
             <TextChanger value={this.state.content.titles[2]}/>
             {/* When the array have objects we can display them that way ... */}
             {this.state.content.projects.map((project, i) => {
-                return <div className="projects" key={i}><TextChanger style={{ flexWrap: 'nowrap' }} value={project.name}/><TextChanger value={project.technologies}/><TextChanger style={{ flexWrap: 'nowrap' }} value={project.period}/></div>
+                return <div className="project" key={i}><TextChanger style={{ flexWrap: 'nowrap' }} value={project.name}/><TextChanger value={project.technologies}/><TextChanger style={{ flexWrap: 'nowrap' }} value={project.period}/></div>
             })}
           </div>
           <div className="card half skills">

@@ -1,9 +1,18 @@
 .projects {
-  text-align: left;
+  @media (--large-desktop) {
+    order: 4;
+    flex: 1 1 100%;
+  }
+}
+
+.project {
+  @media (--tablet) {
+    display: flex;
+    text-align: left;
+  }
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px dashed $borderColor;
-  display: flex;
   justify-content: space-between;
 
   &:nth-last-child(1) {
@@ -12,10 +21,13 @@
 
   :nth-child(3n - 1) {
     text-align: center;
+    flex: 2;
   }
 
   :nth-child(3n) {
-    text-align: right;
+    @media (--tablet) {
+      text-align: right;
+    }
   }
 
   > div {

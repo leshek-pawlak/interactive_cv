@@ -1,6 +1,6 @@
 {
   "titles": ["<h3>Experience</h3>", "<h3>Skills</h3>", "<h3>Projects</h3>"],
-  "me": ["<h1>Leszek Pawlak</h1>", "<h2>Frontend Web Developer</h2>", "<p>worked in Uptowork from 1.07.2017</p>"],
+  "me": ["<h1>Leszek Pawlak</h1>", "<h2>Frontend Web Developer</h2>", "<p>works in Uptowork from 1.07.2017</p>"],
   "experiences": [
     ["<h4>IT Kontrakt (02 - 06 2017)</h4>", "<p>Acting as Frontend Web Developer in the development of a website visualize graphs based on open source project WebVOWL.</p>"],
     ["<h4>Bitnoise (03 2014 - 01 2017)</h4>", "<p>Creating RWD, hybrid applications based on the newest fronted technologies.</p>"],

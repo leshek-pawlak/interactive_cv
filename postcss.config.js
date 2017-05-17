@@ -13,7 +13,7 @@ module.exports = {
                 '--phone': '(min-width: 544px)',
                 '--tablet': '(min-width: 768px)',
                 '--desktop': '(min-width: 992px)',
-                '--large-desktop': '(min-width: 1200px)',
+                '--large-desktop': '(min-width: 1400px)',
             },
         }),
         require('postcss-font-magician')(),
