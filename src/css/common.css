@@ -10,7 +10,7 @@ img {
 }
 
 textarea {
-  background: rgba(255, 255, 255, 0.05) center center no-repeat;
+  background-color: $textareaBackgroundColor;
   border: 2px dashed $borderColor;
   padding: 5px;
   width: 100%;
