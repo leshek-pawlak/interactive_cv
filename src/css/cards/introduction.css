@@ -1,0 +1,91 @@
+.introduction {
+  h1 {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      width: $blockSize;
+      height: $blockSize;
+      background: $extraElementColor;
+    }
+
+    &::before {
+      transform: rotate(45deg) translate(0, calc($blockSize / -2));
+      margin-right: 10px;
+      box-shadow: -1px 2px 0 $shadowColor;
+    }
+
+    &::after {
+      transform: rotate(45deg) translate(0, calc($blockSize / -2));
+      margin-left: 5px;
+      box-shadow: 2px -1px 0 $shadowColor;
+    }
+  }
+
+  h2 {
+    color: $positionColor;
+  }
+
+  p {
+    color: $currentWorkColor;
+    font-style: italic;
+  }
+
+  img {
+    border-radius: 50%;
+    border: 5px dashed $borderColor;
+    padding: 4px;
+    animation: dancingBorder 3s infinite;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .animation-container {
+    height: 160px;
+  }
+}
+
+@keyframes dancingBorder {
+  0% {
+    padding: 4px;
+    border-width: 5px;
+  }
+
+  10% {
+    border-color: $currentWorkColor;
+  }
+
+  20% {
+    padding: 15px;
+    border-width: 7px;
+  }
+
+  30% {
+    border-color: $positionColor;
+  }
+
+  40% {
+    border-color: $editModeColor;
+  }
+
+  50% {
+    padding: 2px;
+    border-width: 10px;
+  }
+
+  70% {
+    padding: 10px;
+    border-width: 1px;
+  }
+
+  80% {
+    border-color: $borderColor;
+  }
+
+  100% {
+    padding: 4px;
+    border-width: 5px;
+  }
+}

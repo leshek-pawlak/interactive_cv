@@ -5,21 +5,29 @@
   }
 }
 
-.project {
+.project,
+.legend {
   @media (--tablet) {
     display: flex;
     text-align: left;
   }
+  $border: 2px dashed $borderColor;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px dashed $borderColor;
+  border-bottom: $border;
   justify-content: space-between;
 
   &:nth-last-child(1) {
     border-bottom: none;
+    margin: 0;
   }
 
   :nth-child(3n - 1) {
+    @media (--tablet) {
+      border-left: $border;
+      border-right: $border;
+    }
+    padding: 0 10%;
     text-align: center;
     flex: 2;
   }
@@ -32,6 +40,7 @@
 
   > div {
     flex: 1;
+    align-self: center;
   }
 
   h4 {
@@ -45,4 +54,9 @@
   strong {
     color: $projectTechnologiesColor;
   }
+}
+
+.legend {
+  font-weight: bold;
+  color: $legendColor;
 }

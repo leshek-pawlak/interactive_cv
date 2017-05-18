@@ -50,9 +50,11 @@ class Home extends Component {
             <option dataValue="edit">Edit CV</option>
             <option dataValue="read">Just read</option>
           </ReactMaterialSelect>
-          {this.props.editMode && <TextChanger value="<p>Double click on text to change it, and double click again to stop changing.</p>"/>}
-          <div className="card">
-            <img src="https://avatars3.githubusercontent.com/u/4362802?v=3&s=460"/>
+          {this.props.editMode && <div className="rms-wrapper"><TextChanger value="<p>Double click on text to change it, and double click again to stop changing.</p>"/></div>}
+          <div className="card introduction">
+            <div className="animation-container">
+              <img src="https://avatars3.githubusercontent.com/u/4362802?v=3&s=460"/>
+            </div>
             {/* Best way to display many elements is map the array */}
             {this.state.content.me.map((content, i) => {
                 return <TextChanger key={i} value={content}/>
@@ -60,6 +62,11 @@ class Home extends Component {
           </div>
           <div className="card projects">
             <TextChanger value={this.state.content.titles[2]}/>
+            <div className="legend">
+              <TextChanger style={{ flexWrap: 'nowrap' }} value="Name" />
+              <TextChanger value="Technologies" />
+              <TextChanger style={{ flexWrap: 'nowrap' }} value="Period" />
+            </div>
             {/* When the array have objects we can display them that way ... */}
             {this.state.content.projects.map((project, i) => {
                 return <div className="project" key={i}><TextChanger style={{ flexWrap: 'nowrap' }} value={project.name}/><TextChanger value={project.technologies}/><TextChanger style={{ flexWrap: 'nowrap' }} value={project.period}/></div>

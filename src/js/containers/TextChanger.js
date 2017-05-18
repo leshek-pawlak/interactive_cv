@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
+import classNames from 'classnames'
 
 class TextChanger extends Component {
     // Here we defined propeties which components or containers can get from parent
@@ -46,7 +47,7 @@ class TextChanger extends Component {
 
     render() {
         return (
-          <div style={this.props.style} className={this.props.className} onDoubleClick={this.doubleClickHandle}>
+          <div style={this.props.style} className={classNames(this.props.className, {textarea: this.state.doubleClicked})} onDoubleClick={this.doubleClickHandle}>
             {this.state.doubleClicked && <textarea defaultValue={this.state.textValue} onChange={this.textareaChangeHandler} />}
             {!this.state.doubleClicked && <div dangerouslySetInnerHTML={{__html: this.state.textValue}} />}
           </div>

@@ -1,10 +1,17 @@
 $backgroundColor: #b0bec5;
 $editModeColor: #ffd54f;
 $cardColor: #fafafa;
-$borderColor: #673ab7;
-$projectNameColor: #673ab7;
-$projectPeriodColor: #009688;
-$projectTechnologiesColor: #6d4c41;
+$borderColor: #757575;
+$extraElementColor: #a1887f;
+$shadowColor: #757575;
+
+$positionColor: #009688;
+$currentWorkColor: #ffb74d;
+
+$legendColor: #795548;
+$projectNameColor: #3f51b5;
+$projectPeriodColor: #03a9f4;
+$projectTechnologiesColor: #607d8b;
 
 $rateBarBackground1: #f63a0f;
 $rateBarBackground3: #f27011;
@@ -13,3 +20,4 @@ $rateBarBackground7: #f2d31b;
 $rateBarBackground9: #86e01e;
 
 $imageSize: 120px;
+$blockSize: 10px;

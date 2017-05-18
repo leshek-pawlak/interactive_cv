@@ -9,6 +9,25 @@ img {
   width: $imageSize;
 }
 
+textarea {
+  background: rgba(255, 255, 255, 0.05) center center no-repeat;
+  border: 2px dashed $borderColor;
+  padding: 5px;
+  width: 100%;
+  max-width: 20vw;
+  max-height: 20vh;
+  min-height: 30px;
+}
+
+.textarea {
+  &::after {
+    content: 'Remember to change carefully!';
+    display: block;
+    font-style: italic;
+    color: $backgroundColor;
+  }
+}
+
 .rms-wrapper {
   width: 100%;
 }
@@ -47,7 +66,7 @@ img {
   position: relative;
   padding: 10px;
   margin: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px $shadowColor, 0 10px 10px $shadowColor;
 
   &.half {
     @media (--tablet) {

@@ -16,27 +16,27 @@
     "PHP": 5
   },
   "projects": [{
-      "name": "<h4>Roche (WebVOWL)</h4>",
+      "name": "<h4>Roche<br/>(WebVOWL)</h4>",
       "period": "<p>2017/02 - 2017/06</p>",
       "technologies": "<strong>JavaScript, AngularJS, D3.js, CSS, PostCSS, Webpack, Grunt</strong>"
     },
     {
-      "name": "<h4>Bitnoise (American Red Cross)</h4>",
+      "name": "<h4>Bitnoise<br/>(American Red Cross)</h4>",
       "period": "<p>2015/08 - 2017/01</p>",
       "technologies": "<strong>JavaScript, AngularJS, Ionic, Cordova, PhoneGap, PostCSS, RESTful API, Grunt, Gulp.js</strong>"
     },
     {
-      "name": "<h4>Bitnoise (ICS Forms)</h4>",
+      "name": "<h4>Bitnoise<br/>(ICS Forms)</h4>",
       "period": "<p>2015/12 - 2016/11</p>",
       "technologies": "<strong>JavaScript, React, Redux, PostCSS, RESTful API, PhantomJS, Node.js, Grunt, Gulp.js</strong>"
     },
     {
-      "name": "<h4>Bitnoise (World Fixer)</h4>",
+      "name": "<h4>Bitnoise<br/>(World Fixer)</h4>",
       "period": "<p>2015/07 - 2016/10</p>",
       "technologies": "<strong>PHP, Symfony 2, DDD architecture, RESTful API, JavaScript, AngularJS, Elasticsearch, MongoDB, Grunt, Gulp.js</strong>"
     },
     {
-      "name": "<h4>Bitnoise (Shuttout)</h4>",
+      "name": "<h4>Bitnoise<br/>(Shuttout)</h4>",
       "period": "<p>2015/06 - 2016/08</p>",
       "technologies": "<strong>PHP, Symfony 2, DDD architecture, RESTful API, JavaScript, AngularJS, PostCSS, Elasticsearch, MongoDB, Scrum, Grunt, Gulp.js, Node.js</strong>"
     }

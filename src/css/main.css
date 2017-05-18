@@ -2,5 +2,6 @@
 @import 'react-material-select/lib/css/reactMaterialSelect.css';
 @import 'variables.css';
 @import 'common.css';
+@import 'cards/introduction.css';
 @import 'cards/projects.css';
 @import 'cards/skills.css';
